@@ -86,7 +86,7 @@
                   <div class="line-one-text">Canberra</div> 
                 </div>
          </div>
-      <div class="ToCreateCompetetiveAdvantangeExploreNewIdeasAndExpandOurCitySPotential" style="width: 545px; height: 49px; color: black; font-size: 20px; font-family: Raleway; font-weight: 500; letter-spacing: 0.20px; word-wrap: break-word">
+      <div class="sub-heading" style="width: 545px; height: 49px; color: black; font-size: 20px; font-family: Raleway; font-weight: 500; letter-spacing: 0.20px; word-wrap: break-word">
         To create competetive advantange, explore new ideas and expand our city’s potential
       </div> 
       <!--CTA Button -->
@@ -115,7 +115,7 @@
     <section class="ourTeam-section">
       <div class="container-one" >
         <!-- card 1 -->
-        <div class="card-one">
+        <div class="card-one reveal">
           <div class="image-frame">
             <div class="Rectangle10"></div>
             <img class="profile-image"  src="image/Layer 4.png" />
@@ -132,7 +132,7 @@
           </div>
         </div>
         <!-- card 2 -->
-        <div class="card-two">
+        <div class="card-two reveal">
           <div class="image-frame">
             <div class="Rectangle10"></div>
             <img class="profile-image"  src="image/Layer 3.png" />
@@ -254,9 +254,10 @@
       $(document).ready(function () {
         let currentImageIndex = 1;
     
-        function animateText(sectionToShow, sectionToHide) {
+        function animateText(sectionToShow, sectionToHide, sectionToHide2) {
           $(sectionToHide).animate({ opacity: 0 }, 500, function () {
             $(sectionToHide).hide();
+            $(sectionToHide2).hide();
             $(sectionToShow).show().animate({ opacity: 1 }, 500);
           });
         }
@@ -285,18 +286,43 @@
             secondImage.animate({ opacity: 1 }, 500);
     
             if (currentImageIndex === 1) {
-              animateText(".loremtext1", ".loremtext5");
+              animateText(".loremtext1", ".loremtext5", ".loremtext2");
             } else if (currentImageIndex === 2) {
-              animateText(".loremtext2", ".loremtext1");
+              animateText(".loremtext2", ".loremtext1", ".loremtext3");
             }else if (currentImageIndex === 3) {
-              animateText(".loremtext3", ".loremtext2");
+              animateText(".loremtext3", ".loremtext2", ".loremtext4");
             }else if (currentImageIndex === 4) {
-              animateText(".loremtext4", ".loremtext3");
+              animateText(".loremtext4", ".loremtext3", ".loremtext5");
             } else {
-              animateText(".loremtext5", ".loremtext4");
+              animateText(".loremtext5", ".loremtext4", ".loremtext1");
             }
           });
         });
       });
     </script>
+     <script type="text/javascript">
+      window.addEventListner('scroll', reveal);
+
+      function reveal(){
+       var reveals = document.querySelectorAll('.reveal');
+
+       for(var i=0; i< reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint =150;
+
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }else{
+              revals[i].classList.remove('active');
+            }
+       
+
+          }
+
+       } 
+ 
+
+   </script>
+
 </html>
