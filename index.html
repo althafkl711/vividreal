@@ -73,7 +73,7 @@
             </nav>
         </header>
 <!-- Heading and carousel -->
-    <div class="hero-container">
+    <div class="hero-container reveal1 ">
       <div class="text-container">
          <div class="heading-container">
                 <div class="line-one" >
@@ -113,14 +113,14 @@
     </section > 
        <!-- People Section  -->
     <section class="ourTeam-section">
-      <div class="container-one" >
+      <div class="container-one " >
         <!-- card 1 -->
         <div class="card-one reveal">
           <div class="image-frame">
             <div class="Rectangle10"></div>
             <img class="profile-image"  src="image/Layer 4.png" />
           </div>
-          <div class="text-frame" >
+          <div class="text-frame " >
             <div class="shape-container">
               <div class="rectangle-bg" ></div>
             </div>
@@ -137,7 +137,7 @@
             <div class="Rectangle10"></div>
             <img class="profile-image"  src="image/Layer 3.png" />
           </div>
-          <div class="text-frame" >
+          <div class="text-frame " >
             <div class="shape-container">
               <div class="rectangle-bg" ></div>
             </div>
@@ -152,7 +152,7 @@
       </div>
       <!-- Explore more button(small) -->
       <a href="">
-        <div class="smallButton" >
+        <div class="smallButton "  >
           <div class="RectangleBtn2" ></div>
           <div class="Button2Container" >
             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="49" viewBox="0 0 62 49" fill="none">
@@ -164,12 +164,11 @@
       </a>
       
     </section>
-    <!-- Slider sectiom -->
-  </section>
+    
   <!-- Slider sectiom -->
   <section class="slider-section">
      
-    <div class="slider-elements" style="justify-content: flex-start; align-items: flex-start; gap: 193px; display: inline-flex">
+    <div class="slider-elements reveal1 " style="justify-content: flex-start; align-items: flex-start; gap: 193px; display: inline-flex">
       <div class="Frame37" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 40px; display: inline-flex">
         <div class="Frame36" style="justify-content: flex-start; align-items: center; gap: 19px; display: inline-flex">
           <div class="Rectangle12" style="width: 14px; height: 122px; background: #4B7660"></div>
@@ -300,8 +299,10 @@
         });
       });
     </script>
-     <script type="text/javascript">
-      window.addEventListner('scroll', reveal);
+
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
 
       function reveal(){
        var reveals = document.querySelectorAll('.reveal');
@@ -309,12 +310,12 @@
        for(var i=0; i< reveals.length; i++){
             var windowheight = window.innerHeight;
             var revealtop = reveals[i].getBoundingClientRect().top;
-            var revealpoint =150;
+            var revealpoint =  150;
 
             if(revealtop < windowheight - revealpoint){
               reveals[i].classList.add('active');
             }else{
-              revals[i].classList.remove('active');
+              reveals[i].classList.remove('active');
             }
        
 
@@ -324,5 +325,32 @@
  
 
    </script>
+   <script type="text/javascript">
+    // Create a new Intersection Observer instance
+    var observer = new IntersectionObserver(revealOnScreen, { threshold: 0.5 });
+  
+    // Select elements with the class 'reveal'
+    var reveals = document.querySelectorAll('.reveal1');
+  
+    // Observe each 'reveal' element
+    reveals.forEach(function (element) {
+      observer.observe(element);
+    });
+  
+    // The callback function for the Intersection Observer
+    function revealOnScreen(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }
+  </script>
+  
+  
+
+
+
+
 
 </html>

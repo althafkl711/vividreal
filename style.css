@@ -277,6 +277,31 @@ body {
   border: 1px rgb(206, 206, 206) solid;
   
 }
+/* Section to animation */
+.reveal{
+  position: relative;
+  transform : translateY(350px);
+  opacity: 0;
+  transition: all 2s ease;
+
+}
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+  
+}
+.reveal1{
+  position: relative;
+  transform : translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+
+}
+.reveal1.active{
+  transform: translateY(0px);
+  opacity: 1;
+  
+}
 
 /* Our Team Section */
 .ourTeam-section {
@@ -292,7 +317,7 @@ body {
 
 
 .container-one {
-  width: 60%;
+  width: 70%;
   height: auto;
   justify-content: space-between;
   
@@ -310,6 +335,8 @@ body {
     flex-direction: column;
   }
 }
+
+
 .card-one , .card-two{
   flex-direction: column;
   justify-content: center;
@@ -442,7 +469,8 @@ body {
   background: #231F20;
   justify-content: center;
   align-items: center;
-  display: inline-flex
+  display: inline-flex;
+  overflow: hidden;
 }
 .slider-arrowBox {
   justify-content: flex-start;
