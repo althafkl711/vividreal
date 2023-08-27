@@ -19,7 +19,7 @@ body {
 /* Hero Section */
 .hero-section {
   width: 100%;
-  height: 680px;
+  height: 80vh;
   background-color: rgb(254, 206, 47);
   display: flex;
   flex-direction: column;
@@ -292,12 +292,12 @@ body {
 
 
 .container-one {
-  width: 80%;
+  width: 60%;
   height: auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5%px;
-  display: inline-flex
+  justify-content: space-between;
+  
+  
+  display: flex;
 }
 @media (min-width: 577px) and (max-width: 980px) {
   .container-one {
@@ -312,29 +312,29 @@ body {
 }
 .card-one , .card-two{
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 50px;
   display: inline-flex
 }
 
 .image-frame {
-  width: 520.41px;
-  height: 664px;
+  width: 407px;
+  height: 516px;
   position: relative
 }
 
 .image-frame img {
-  width: 481px;
-  height: 630px;
+  width: 368px;
+  height: 482px;
   left: 0px;
   top: 0px;
   position: absolute;
 }
 
 .Rectangle10 {
-  width: 481px;
-  height: 630px;
+  width: 368px;
+  height: 482px;
   left: 39px;
   top: 34px;
   position: absolute;
@@ -381,7 +381,7 @@ body {
 }
 .text-name {
   color: black;
-  font-size: 46px;
+  font-size: 36px;
 
   font-weight: 700;
   word-wrap: break-word
@@ -389,13 +389,14 @@ body {
 
 .text-role {
   color: #4b7660;
-  font-size: 26px;
+  font-size: 24px;
   
   font-style: italic;
   font-weight: 700;
   word-wrap: break-word
 }
 .text-discription {
+  width: 300px;
   color: black;
   font-size: 14px;
   
