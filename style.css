@@ -181,6 +181,19 @@ body {
   margin-right: 50px;
 }
 
+@media (max-width:764px) {
+  
+  
+    
+  .carousal-container img {
+    width: 300px;
+    margin-top: 220px;
+    margin-right: 45px;
+   
+  }
+
+  
+}
 
 .heading-container {
   left: 200px;
@@ -240,12 +253,16 @@ body {
 }
 
 .Rectangle1 {
-  width: 208px;
+  width: 203px;
   height: 52px;
   left: 10px;
   top: 8px;
   position: absolute;
   background: #F04E30
+}
+.cta-button:hover .Rectangle1{
+  transition: all 2s ease;
+  background: #f02d0a;
 }
 
 
@@ -305,7 +322,7 @@ body {
 
 /* Our Team Section */
 .ourTeam-section {
-  padding-top: 200px;
+  padding-top: 250px;
   padding-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -346,8 +363,8 @@ body {
 }
 
 .image-frame {
-  width: 407px;
-  height: 516px;
+  width: 392px;
+  height: 506px;
   position: relative
 }
 
@@ -362,8 +379,8 @@ body {
 .Rectangle10 {
   width: 368px;
   height: 482px;
-  left: 39px;
-  top: 34px;
+  left: 24px;
+  top: 24px;
   position: absolute;
   background: #F9E7DD
 }
