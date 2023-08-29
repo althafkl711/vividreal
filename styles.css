@@ -19,25 +19,15 @@
   /* Hero Section */
   .hero-section {
     width: 100%;
-    height: calc(100%+80px);
-    padding-bottom: 50px;
+    height: auto;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
-  }
-  .yellow-bg{
-    width: 100%;
-    height: 100%;
-    padding-bottom: 30px;
     background-color: rgb(254, 206, 47);
   }
   
-  @media  (min-width: 1300px) {
-    .yellow-bg{
-        width: 100%;
-        height: 80vh;
-        background-color: rgb(254, 206, 47);
-      }
-  }
+  
+  
   /*Navbar */
   .n2{
     display: none;
@@ -193,14 +183,18 @@
     margin-left: 5%;
     margin-top: 5%;
     z-index: 10;
-    gap: 40px;
+    gap: 50px;
   }
   
   .carousal-container {
     width: 60%;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+  
+    transform: translateY(50%);
   }
   
   .carousal-container img {
@@ -210,7 +204,9 @@
   }
   
   @media (max-width:764px) {
-  
+    .hero-section{
+      height: auto;
+    }
     .hero-container {
   
         width: 100%;
@@ -249,6 +245,7 @@
         justify-content: center;
         order: -1;
         align-items: center;
+        transform: translateY(0%);
       }
     .carousal-container img {
       width: 80%;
@@ -406,7 +403,9 @@
     letter-spacing: 0.20px;
     
    }
-   
+   .carousal-container{
+    transform: translateY(00%);
+   }
   }
   
   .cta-button {
@@ -741,13 +740,14 @@
     padding-bottom: 54px;
     
     background: #231F20;
-    justify-content: center;
+    justify-content: center ;
     align-items: center;
     display: flex;
+    flex-direction: row;
     overflow: hidden;
   }
   .slider-elements {
-     width: 90%;
+     width: 85%;
       justify-content: center;
       align-items: flex-start;
       display: flex;
@@ -756,6 +756,25 @@
       
       
   }
+  .left-sec {
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    display: inline-flex
+}
+.right-sec {
+    width: 50%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    right: 0;
+    overflow: hidden;
+}
   
   @media (max-width:1024px) {
     .slider-elements {
