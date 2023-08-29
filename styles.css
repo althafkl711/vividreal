@@ -19,7 +19,7 @@
   /* Hero Section */
   .hero-section {
     width: 100%;
-    height: auto;
+    height: 90vh;
     padding-bottom: 100px;
     display: flex;
     flex-direction: column;
@@ -169,7 +169,7 @@
   .hero-container {
   
     width: 100%;
-    height: auto;
+    height: 60vh;
     display: flex;
     flex-direction: row;
   
@@ -179,11 +179,11 @@
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: inherit;
+    height: 100%;
     margin-left: 5%;
     margin-top: 5%;
     z-index: 10;
-    gap: 50px;
+    justify-content: space-evenly;
   }
   
   .carousal-container {
@@ -194,7 +194,7 @@
     align-items: center;
    
   
-    transform: translateY(50%);
+    transform: translateY(30%);
   }
   
   .carousal-container img {
@@ -502,7 +502,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     
     
   }
